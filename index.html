@@ -62,6 +62,15 @@ code { background: var(--code); padding: 0.1em 0.35em; border-radius: 4px; font-
 .figure img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
 .figure figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
 .todo { border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.btn {
+  display: inline-block; padding: 0.6rem 1.1rem; border-radius: 8px;
+  background: var(--accent); color: #fff; text-decoration: none;
+  font-weight: 600; font-size: 0.95rem; border: 1px solid var(--accent);
+}
+.btn:hover { filter: brightness(1.1); }
+.btn-secondary { background: transparent; color: var(--accent); }
+.btn-secondary:hover { background: var(--accent-soft); filter: none; }
 .site-footer { padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.9rem; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 40rem) {
@@ -84,6 +93,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
         <li><a href="#overview">Overview</a></li>
         <li><a href="#architecture">Architecture</a></li>
         <li><a href="#branches">Branch details</a></li>
+        <li><a href="#code">Code</a></li>
         <li><a href="#limitations">Limitations</a></li>
         <li><a href="#reproduce">Reproduce</a></li>
       </ul>
@@ -164,6 +174,33 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 
 
+
+<section id="code" aria-labelledby="code-h">
+  <h2 id="code-h">Code</h2>
+  <p>Browse or download the pipeline notebooks: three ablations and the final end-to-end code.</p>
+  <div class="cards">
+    <article class="card">
+      <h3>Ablation 1 &mdash; No cache</h3>
+      <p>Runs without the per-video ChromaDB cache; every question recomputes its branch from scratch.</p>
+      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation1_no_cache.ipynb" download>View / Download code</a></div>
+    </article>
+    <article class="card">
+      <h3>Ablation 2 &mdash; No reranker</h3>
+      <p>Dense retrieval only; skips the BM25 re-ranking step before answer generation.</p>
+      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation2_no_reranker.ipynb" download>View / Download code</a></div>
+    </article>
+    <article class="card">
+      <h3>Ablation 3 &mdash; Unrestricted retrieval</h3>
+      <p>Retrieves across all categories instead of filtering to the routed branch category.</p>
+      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation3_unrestricted_retrieval.ipynb" download>View / Download code</a></div>
+    </article>
+    <article class="card">
+      <h3>Final pipeline</h3>
+      <p>Full query-adaptive pipeline with cache, hybrid retrieval, and evaluation.</p>
+      <div class="btn-row"><a class="btn" href="./notebooks/FINAL_batch_1_with_eval.ipynb" download>View / Download final code</a></div>
+    </article>
+  </div>
+</section>
 
 <section id="limitations" aria-labelledby="lim-h">
   <h2 id="lim-h">Limitations</h2>
