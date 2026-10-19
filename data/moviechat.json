@@ -1,0 +1,352 @@
+[
+    {
+        "video_id": "10.mp4",
+        "question": "Does the ballroom dance and letter-reading sequence take place in a historical era or in modern times?",
+        "ground_truth_answer": "A historical era \u2014 the caption describes classical 18th-century English attire and customs.",
+        "predicted_answer": "Yes, the ballroom dance and letter-reading sequence takes place in a historical era.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "11.mp4",
+        "question": "In what order do the night conversation, the church sermon, and the rainy day occur?",
+        "ground_truth_answer": "First the night conversation, then dawn breaks for the church sermon, and finally the rainy day arrives.",
+        "predicted_answer": "The order of events is: night conversations, church sermon, and then rainy day scenes.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "12.mp4",
+        "question": "Does the woman open and read the letter at night or during the day?",
+        "ground_truth_answer": "At night.",
+        "predicted_answer": "The woman opens and reads the letter in a dimly lit environment, suggesting it is likely at night or during the evening.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "13.mp4",
+        "question": "Do the girl and her father search the forest during the day or at night?",
+        "ground_truth_answer": "At night, using flashlights.",
+        "predicted_answer": "The girl and her father search the forest at night.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "101.mp4",
+        "question": "Does the woman rush outside to find the little girl before or after she encounters the wounded people and stretchers?",
+        "ground_truth_answer": "Before \u2014 she rushes out first, then weaves through the carriages and wounded on her way.",
+        "predicted_answer": "The woman rushes outside to find the little girl after she encounters the wounded people and stretchers.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "112.mp4",
+        "question": "Is the boy practicing golf at home during the day or at night?",
+        "ground_truth_answer": "At night \u2014 his mother finds him practicing by the light of an oil lamp.",
+        "predicted_answer": "The boy is practicing golf at night by the light of an oil lamp.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "113.mp4",
+        "question": "Does the golf competition happen on the same night as the dance party, or on a later day?",
+        "ground_truth_answer": "On a later day \u2014 the dance party happens at night, and the golf competition takes place the following day.",
+        "predicted_answer": "The summary does not explicitly state whether the golf competition happens on the same night as the dance party or on a later day. It suggests a transition between events but leaves their schedules uncertain in relation to one another. Therefore, it is unclear if they occur on the same night or on different days.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "118.mp4",
+        "question": "Does the military capture and shooting of the two civilians happen during the day or late at night?",
+        "ground_truth_answer": "Late at night.",
+        "predicted_answer": "The military capture and shooting of the two civilians happen late at night.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "139.mp4",
+        "question": "Does the cruise liner depart from the dock during the day or in the evening?",
+        "ground_truth_answer": "In the evening.",
+        "predicted_answer": "The cruise liner departs at evening from the dock.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "140.mp4",
+        "question": "Does the woman in the red dress run out onto the deck in tears before or after the man is seen gazing at the starry sky?",
+        "ground_truth_answer": "After \u2014 the man gazing at the starry sky is shown first, then the woman runs out in tears.",
+        "predicted_answer": "The woman in the red dress ran out onto the deck in tears after the man gazing at the starry night was shown.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "10.mp4",
+        "question": "Where does the family gather for their meal the day after the ball?",
+        "ground_truth_answer": "In the dining room.",
+        "predicted_answer": "The family gathers for their meal around a dining table in a warmly lit room adorned with portraits.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "11.mp4",
+        "question": "In what type of building does the pastor deliver his sermon?",
+        "ground_truth_answer": "Inside a church.",
+        "predicted_answer": "The pastor delivers his sermon in a church.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "12.mp4",
+        "question": "What kind of vehicle do the travelers use on the country road?",
+        "ground_truth_answer": "Horse-drawn carriages.",
+        "predicted_answer": "The travelers use carts drawn by horses to travel across the country road.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "13.mp4",
+        "question": "Where do the girl and her father search with flashlights?",
+        "ground_truth_answer": "In a forest.",
+        "predicted_answer": "The girl and her father search with flashlights in a dimly lit forest.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "100.mp4",
+        "question": "Where do the elegantly dressed ladies and gentlemen gather after the carriages arrive?",
+        "ground_truth_answer": "Inside the estate's grand hall.",
+        "predicted_answer": "After the carriages arrive, the elegantly dressed ladies and gentlemen gather outside grand estates with tall columns.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "101.mp4",
+        "question": "Where is the man in white attire standing when he first appears?",
+        "ground_truth_answer": "At a window on the second floor, above the bar entrance.",
+        "predicted_answer": "The man in the white attire is seen standing on the second floor at a window in the bar.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "102.mp4",
+        "question": "Where does the woman encounter the group of bandits?",
+        "ground_truth_answer": "On the road, while driving away in her carriage.",
+        "predicted_answer": "The woman got into a conflict with a group of bandits while she was in her carriage driving on the road.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "112.mp4",
+        "question": "Where does the boy see the man swing a golf club in front of a crowd of spectators?",
+        "ground_truth_answer": "Inside a house, in front of a curtain.",
+        "predicted_answer": "The boy saw the man swinging the golf club inside his house beside a curtain.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "118.mp4",
+        "question": "Where does the girl end up after following the elf-like creature?",
+        "ground_truth_answer": "Down a set of stairs, into a ruin/pit where she meets the horned monster.",
+        "predicted_answer": "The ended up falling into a pit running down the stairs.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "140.mp4",
+        "question": "Where does the woman in the red dress go when she runs out crying?",
+        "ground_truth_answer": "Onto the ship's deck, by the railing.",
+        "predicted_answer": "The woman in the red dress goes down onto the deck of the cruise holding the railing.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "12.mp4",
+        "question": "How many women take part in the living room conversation?",
+        "ground_truth_answer": "Two.",
+        "predicted_answer": "Two women take part in the living room conversation.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "100.mp4",
+        "question": "How many distinctly colored dresses are mentioned among the women at the estate?",
+        "ground_truth_answer": "Two \u2014 a lady in white and a lady in blue.",
+        "predicted_answer": "Two distinctly colored dresses are mentioned among the women at the estate.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "101.mp4",
+        "question": "Are there wounded people lying on the ground during the carriage scene?",
+        "ground_truth_answer": "Yes, many, alongside the carriages and stretchers.",
+        "predicted_answer": "Yes, there are wounded people lying on the ground during the carriage scene, as indicated by the descriptions of chaos and distress in the outdoor environment.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "102.mp4",
+        "question": "How many women are seen counting money together?",
+        "ground_truth_answer": "Two.",
+        "predicted_answer": "Two women are seen counting money sitting in a basement.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "113.mp4",
+        "question": "How many men chat with the woman before one of them invites her to dance?",
+        "ground_truth_answer": "Two.",
+        "predicted_answer": "Two men were chatting with the woman standing beside the curtain before the man wearing the white shirt invited her to dance .",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "131.mp4",
+        "question": "Are there multiple chipmunks descending the elevator at the start of the video?",
+        "ground_truth_answer": "Yes, several, each dressed in different outfits.",
+        "predicted_answer": "Yes, there are many chipmunks descending the elevator at the start of the video. ",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "139.mp4",
+        "question": "Are many people and vehicles gathered near the sunken ship on the ocean floor?",
+        "ground_truth_answer": "Yes.",
+        "predicted_answer": "Yes, there are scenes depicting many people or vehicles gathered near the sunken ship on the ocean floor.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "141.mp4",
+        "question": "How many maids attend to the woman after the man storms off?",
+        "ground_truth_answer": "Two \u2014 one comes to assist, then another helps her dress and offers comfort.",
+        "predicted_answer": "Two maids came to assist the falling woman after the man stormed her.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "144.mp4",
+        "question": "How many crew members notice the object ahead and grow worried?",
+        "ground_truth_answer": "Two.",
+        "predicted_answer": "Two crew members wearing \"White Star Line\" caps express concern about the impending disaster, indicating they notice the object ahead and grow worried.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "118.mp4",
+        "question": "How many civilians are captured by the military officers at night?",
+        "ground_truth_answer": "Two.",
+        "predicted_answer": "The summary does not provide explicit numbers regarding the captures of civilians by military officers at night.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "10.mp4",
+        "question": "In what setting and era does the family gather for their meal the day after the ball?",
+        "ground_truth_answer": "In the dining room, during a historical (18th-century English) era.",
+        "predicted_answer": "The family gathers for their meal in a warmly lit room decorated with portraits, suggesting an elegant historical setting reminiscent of earlier centuries, likely the day after a grand ball.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "11.mp4",
+        "question": "Where does the pastor deliver his sermon, and does this happen at dawn or at night?",
+        "ground_truth_answer": "Inside a church, at dawn.",
+        "predicted_answer": "The pastor delivers his sermon at dawn, inside the church.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "12.mp4",
+        "question": "Where is the woman when she opens the letter at night?",
+        "ground_truth_answer": "At home, at night.",
+        "predicted_answer": "The woman is in a dimly lit room, specifically by a window or lying in bed, illuminated by the glow of a flickering candle.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "13.mp4",
+        "question": "Where do the girl and her father search with flashlights, and is it day or night?",
+        "ground_truth_answer": "In a forest, at night.",
+        "predicted_answer": "The girl and her father search in a dark, misty forest with flashlights, and it is night.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "101.mp4",
+        "question": "Where does the chaotic wounded-people scene take place, and does the setting suggest a historical or modern era?",
+        "ground_truth_answer": "Outdoors, among carriages and stretchers \u2014 a historical era.",
+        "predicted_answer": "The chaotic scene takes place in a war-torn city characterized by damaged buildings and debris, suggesting a historical era marked by conflict rather than a modern one.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "112.mp4",
+        "question": "Where does the boy secretly practice golf, and is it day or night?",
+        "ground_truth_answer": "At home, at night.",
+        "predicted_answer": "The boy practices golf by a dim light at night in his house.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "118.mp4",
+        "question": "Where does the military capture take place, and is it day or night?",
+        "ground_truth_answer": "Outdoors, late at night.",
+        "predicted_answer": "The military capture takes place in dark, underground settings and wooded areas, and it occurs at night.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "120.mp4",
+        "question": "Where does the girl end up right after the insect appears, and does the transition happen instantly or gradually?",
+        "ground_truth_answer": "In a ruin, and it happens instantly (\"in the blink of an eye\").",
+        "predicted_answer": "Right after the insect appears, the girl is seen sitting in a bathtub, looking at a whimsical dragonfly. The transition from the playful atmosphere to the darker themes happens gradually, as the scenes progress from lighthearted moments to encounters with more ominous creatures.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "139.mp4",
+        "question": "Where does the cruise liner depart from, and does it leave during the day or in the evening?",
+        "ground_truth_answer": "From the dock, in the evening.",
+        "predicted_answer": "The cruise liner departs from a dock, likely in Southampton, as indicated by the green truck labeled \"FRANCIS LTD SOUTHAMPTON.\" The summary does not specify whether the departure occurs during the day or in the evening.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "140.mp4",
+        "question": "Where does the woman go after rushing out in tears, and does this happen during the day or at night?",
+        "ground_truth_answer": "Onto the deck by the railing, at night (a starry sky is referenced just before).",
+        "predicted_answer": "The woman rushed into the deck of the cruise by the railing at night.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "10.mp4",
+        "question": "Given the ballroom dancing scene, is music most likely playing?",
+        "ground_truth_answer": "Yes, likely, given the dancing at the ball.",
+        "predicted_answer": "Yes, music is most likely playing during the ballroom dancing scene, as the descriptions of dancing and lively interactions strongly imply a musical backdrop typical of such events.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "11.mp4",
+        "question": "Would the pastor's sermon likely involve spoken dialogue rather than silence?",
+        "ground_truth_answer": "Yes, likely spoken preaching/dialogue.",
+        "predicted_answer": "Yes, the pastor's sermon would likely involve spoken dialogue rather than silence.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "12.mp4",
+        "question": "Would the horse-drawn carriage travel on the country road likely produce ambient sound, such as hooves and wheels?",
+        "ground_truth_answer": "Yes, likely ambient travel sounds like hooves and carriage wheels.",
+        "predicted_answer": "Yes, the summary indicates that there are several references to country roads or outdoor settings where sounds from horse-drawn carriages occur.",
+        "video_duration_sec": 480.0219756
+    },
+    {
+        "video_id": "13.mp4",
+        "question": "Would the classroom scene likely include a teacher's voice or spoken instruction?",
+        "ground_truth_answer": "Yes, likely spoken instruction or dialogue.",
+        "predicted_answer": "Yes, the classroom scene includes a teacher's voice or spoken instruction.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "100.mp4",
+        "question": "Would the group of women praying likely involve murmured or spoken prayer sounds?",
+        "ground_truth_answer": "Yes, likely quiet murmured or spoken prayer.",
+        "predicted_answer": "The group of women praying would likely involve murmured prayer sounds, as the atmosphere is described as somber and reflective, conducive to quiet communication.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "101.mp4",
+        "question": "Given the chaotic scene with wounded people, would cries of pain or distress likely be audible?",
+        "ground_truth_answer": "Yes, likely cries of pain or distress.",
+        "predicted_answer": "Yes, given the chaotic scene with wounded people, cries of pain or distress would likely be audible.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "112.mp4",
+        "question": "Would the golf swing and applauding crowd scene likely include cheering sounds?",
+        "ground_truth_answer": "Yes, likely cheering and applause.",
+        "predicted_answer": "Yes, the golf swing and applauding crowd scene would likely include cheering sounds.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "118.mp4",
+        "question": "Would gunshots likely be audible during the shooting of the second civilian?",
+        "ground_truth_answer": "Yes, likely gunfire sounds.",
+        "predicted_answer": "Yes, gunshots would likely be audible during the shooting of the second civilian, given the tense and violent atmosphere described in the summary.",
+        "video_duration_sec": 480.0212083333333
+    },
+    {
+        "video_id": "139.mp4",
+        "question": "Would the casino card-playing scene likely include chatter and shuffling sounds?",
+        "ground_truth_answer": "Yes, likely chatter and card-shuffling sounds.",
+        "predicted_answer": "Yes, the casino card-playing scene would likely include chatter and shuffling sounds, as the summary emphasizes a lively atmosphere with social interactions and card games.",
+        "video_duration_sec": 480.0
+    },
+    {
+        "video_id": "144.mp4",
+        "question": "Would panicked shouting likely be audible as water floods the cabin?",
+        "ground_truth_answer": "Yes, likely panicked shouting and commotion.",
+        "predicted_answer": "Yes, panicked shouting would likely be audible as water floods the cabin, given the urgency and chaos described in the scenes.",
+        "video_duration_sec": 480.0
+    }
+]

@@ -1,0 +1,351 @@
+[
+    {
+        "video_id": "nJq8o814oY0",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place at the Ukrainian Cultural Heritage Village in Alberta, Canada.",
+        "video_duration_sec": 199.5994
+    },
+    {
+        "video_id": "OmHmobUOB1I",
+        "question": "How Long is the performance?",
+        "ground_truth_answer": "less than 10 minutes",
+        "predicted_answer": "The duration of each clip is around five seconds, but the summary does not specify the total length of the entire performance.",
+        "video_duration_sec": 131.76
+    },
+    {
+        "video_id": "u9yiswwScL4",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The classical guitars make the sound <FL>.",
+        "video_duration_sec": 295.48
+    },
+    {
+        "video_id": "MONDIK1KMbg",
+        "question": "Is there a guitar in the entire video?",
+        "ground_truth_answer": "no",
+        "predicted_answer": "No, guitars are not played during the video.",
+        "video_duration_sec": 376.2425333333333
+    },
+    {
+        "video_id": "zuSWPYdVhAs",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in park settings.",
+        "video_duration_sec": 224.72
+    },
+    {
+        "video_id": "_GBd-M5tUss",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "right",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the accordion.",
+        "video_duration_sec": 189.63333333333333
+    },
+    {
+        "video_id": "iINDBPYVruo",
+        "question": "How many instruments are sounding in the video?",
+        "ground_truth_answer": "four",
+        "predicted_answer": "The video primarily features four musicians playing clarinets, so there are four instruments sounding in the video.",
+        "video_duration_sec": 189.65613333333334
+    },
+    {
+        "video_id": "1vOQ2wSt25o",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in lush green outdoor settings, specifically in vibrant fields surrounded by blooming trees and colorful flowers.",
+        "video_duration_sec": 252.23333333333332
+    },
+    {
+        "video_id": "O4u8n_CjUDY_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "right",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the ukulele.",
+        "video_duration_sec": 204.20399999999998
+    },
+    {
+        "video_id": "M6PYKRO2LCA",
+        "question": "How many types of musical instruments appeared in the entire video?",
+        "ground_truth_answer": "three",
+        "predicted_answer": "Three types of musical instruments appeared in the entire video: accordion, guitar, and bass.",
+        "video_duration_sec": 218.38483333333335
+    },
+    {
+        "video_id": "Nxmf5uaosPo",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "indoor",
+        "predicted_answer": "The performance takes place on a cobblestone street in an outdoor urban environment.",
+        "video_duration_sec": 143.87706666666668
+    },
+    {
+        "video_id": "TG8bZ6E1PjE_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "right",
+        "predicted_answer": "The clarinet makes the sound FL.",
+        "video_duration_sec": 254.23333333333332
+    },
+    {
+        "video_id": "JpWX41ZXAfo",
+        "question": "Is there a <Object> sound?",
+        "ground_truth_answer": "yes",
+        "predicted_answer": "Yes, there is a cohesive musical sound created by the interplay between the violin, clarinet, and piano in the performances.",
+        "video_duration_sec": 344.4107333333333
+    },
+    {
+        "video_id": "GfKdtxG6wGg",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in various outdoor urban settings, including busy streets, riverside walkways, and parks.",
+        "video_duration_sec": 333.76
+    },
+    {
+        "video_id": "cQBNj81l04o",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The flute makes the sound <FL>.",
+        "video_duration_sec": 216.86666666666667
+    },
+    {
+        "video_id": "AQ0JFjt9Cpo",
+        "question": "How many musical instruments were heard throughout the video?",
+        "ground_truth_answer": "five",
+        "predicted_answer": "Four musical instruments were heard throughout the video: two violins, a viola, and a cello.",
+        "video_duration_sec": 177.94443333333334
+    },
+    {
+        "video_id": "4uX1IkXzyKg",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in a vibrant indoor garden or greenhouse filled with greenery and tropical plants.",
+        "video_duration_sec": 147.08
+    },
+    {
+        "video_id": "wwj8mTiZi8o_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "right",
+        "predicted_answer": "The grand piano makes the sound FL.",
+        "video_duration_sec": 732.2666666666667
+    },
+    {
+        "video_id": "qwv-0WxuUDc",
+        "question": "How many musical instruments were heard throughout the video?",
+        "ground_truth_answer": "four",
+        "predicted_answer": "Four distinct musical instruments were heard being played throughout the video.",
+        "video_duration_sec": 123.46666666666667
+    },
+    {
+        "video_id": "-of8aJUkwk8",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place outdoors, often in a courtyard, surrounded by nature with plants and decorative elements.",
+        "video_duration_sec": 199.26573333333334
+    },
+    {
+        "video_id": "6aO_Zl85u60_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "right",
+        "predicted_answer": "The object that makes the sound is the violin.",
+        "video_duration_sec": 331.79813333333334
+    },
+    {
+        "video_id": "B8nABklpp3k",
+        "question": "How many sounding <Object> in the video\uff1f",
+        "ground_truth_answer": "more than ten",
+        "predicted_answer": "There are a total of sixteen sounding instruments in the video."
+    },
+    {
+        "video_id": "_jClTVEXUT8",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in various bustling outdoor settings, predominantly in public squares and plazas decorated for the holidays or with festive lighting.",
+        "video_duration_sec": 293.06743919692786
+    },
+    {
+        "video_id": "ofI_6WmeRus_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The object that makes the sound FL is the trumpet.",
+        "video_duration_sec": 64.73133333333332
+    },
+    {
+        "video_id": "ZMPgSg4u_x4",
+        "question": "How many musical instruments were heard throughout the video?",
+        "ground_truth_answer": "four",
+        "predicted_answer": "Four distinct musical instruments were heard.",
+        "video_duration_sec": 178.08
+    },
+    {
+        "video_id": "xfr073fWnzk",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place on a lively city street, in front of buildings and by caf\u00e9s.",
+        "video_duration_sec": 251.16
+    },
+    {
+        "video_id": "XRXys1vQzvI_flip",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The bassoon makes the sound <FL>.",
+        "video_duration_sec": 302.96933333333334
+    },
+    {
+        "video_id": "Cw9GWgngCM8",
+        "question": "Is there a <Object> in the entire video?",
+        "ground_truth_answer": "yes",
+        "predicted_answer": "Yes, there are music stands in the video.",
+        "video_duration_sec": 404.15374999999995
+    },
+    {
+        "video_id": "ux-NRnwUIDY",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance is set against a backdrop of soft, floral aesthetics, primarily featuring cherry blossoms, which evoke a traditional and refined ambiance associated with Chinese culture.",
+        "video_duration_sec": 246.68
+    },
+    {
+        "video_id": "TG8bZ6E1PjE",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The clarinet makes the sound <FL>.",
+        "video_duration_sec": 254.23333333333332
+    },
+    {
+        "video_id": "SsvSv_-uWvE",
+        "question": "Is there a <Object> in the entire video?",
+        "ground_truth_answer": "no",
+        "predicted_answer": "Yes, there is an orchestra in the entire video.",
+        "video_duration_sec": 349.04
+    },
+    {
+        "video_id": "C99ND2xgz0E",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in various outdoor settings, predominantly in public squares, city streets, and bustling urban areas.",
+        "video_duration_sec": 219.44
+    },
+    {
+        "video_id": "O0OSM9iFEo0",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the drums.",
+        "video_duration_sec": 211.33612499999998
+    },
+    {
+        "video_id": "2XGCqoR9T7Q",
+        "question": "Is there a <Object> sound?",
+        "ground_truth_answer": "no",
+        "predicted_answer": "The summary does not provide any information about the presence or absence of a specific sound. It focuses on the visual aspects of the performances and the musicians involved. Therefore, it cannot be determined if there is a specific sound.",
+        "video_duration_sec": 207.7075
+    },
+    {
+        "video_id": "hWbFXcBAmkQ",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance is set outdoors, specifically under trees in a scenic and picturesque natural setting.",
+        "video_duration_sec": 154.6
+    },
+    {
+        "video_id": "UFAwOEREX0E",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The classical guitars make the sound <FL>.",
+        "video_duration_sec": 273.5065666666667
+    },
+    {
+        "video_id": "ciAuN83h20Y",
+        "question": "How many sounding <Object> in the video\uff1f",
+        "ground_truth_answer": "three",
+        "predicted_answer": "The video features three types of sounding instruments: violins, a viola, and a cello. Therefore, there are a total of four sounding instruments in the video.",
+        "video_duration_sec": 448.51473333333337
+    },
+    {
+        "video_id": "7p8GMgDDIOM",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performances take place in various indoor and outdoor settings, primarily in bustling shopping areas, including hallways, shops, wet streets, and lively marketplaces.",
+        "video_duration_sec": 158.44647472063482
+    },
+    {
+        "video_id": "XLH47I9b0a0",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "middle",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the saxophone.",
+        "video_duration_sec": 163.0
+    },
+    {
+        "video_id": "4k4OPvq8nng",
+        "question": "How many sounding <Object> in the video\uff1f",
+        "ground_truth_answer": "two",
+        "predicted_answer": "There are two unique and distinct sounding objects in the video.",
+        "video_duration_sec": 238.73850000000002
+    },
+    {
+        "video_id": "reDidGQNifs",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place in a lush, green outdoor setting, characterized by natural beauty, near bodies of water such as ponds and rivers.",
+        "video_duration_sec": 180.73333333333332
+    },
+    {
+        "video_id": "M6c-vmaShvc",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the flute.",
+        "video_duration_sec": 419.9195
+    },
+    {
+        "video_id": "yzUFp1IkXlQ",
+        "question": "Are there <Object> and <Object> instruments in the video?",
+        "ground_truth_answer": "yes",
+        "predicted_answer": "Yes, there are violins and a cello in the video.",
+        "video_duration_sec": 136.6365
+    },
+    {
+        "video_id": "-Med892V-KA",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place outdoors in a park-like environment, primarily among trees.",
+        "video_duration_sec": 121.4888888888889
+    },
+    {
+        "video_id": "tAYHUYhqdsE",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The <Object> that makes the sound <FL> is the ukulele.",
+        "video_duration_sec": 111.87843333333333
+    },
+    {
+        "video_id": "2keZjbn4C6k",
+        "question": "Is there a <Object> in the entire video?",
+        "ground_truth_answer": "yes",
+        "predicted_answer": "Yes, there are ukuleles in the entire video.",
+        "video_duration_sec": 143.5434
+    },
+    {
+        "video_id": "SW24N9h2xK8",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance takes place primarily in outdoor environments such as parks and gardens.",
+        "video_duration_sec": 273.26666666666665
+    },
+    {
+        "video_id": "usle4l8V3-E",
+        "question": "Which <Object> makes the sound <FL>?",
+        "ground_truth_answer": "left",
+        "predicted_answer": "The pipa makes the sound <FL>.",
+        "video_duration_sec": 332.16516666666666
+    },
+    {
+        "video_id": "x_eAAbjDPm0",
+        "question": "Are there <Object> and <Object> sound? ",
+        "ground_truth_answer": "yes",
+        "predicted_answer": "Yes, there are string and woodwind sounds.",
+        "video_duration_sec": 381.68
+    },
+    {
+        "video_id": "LahSZ7mxQ_U",
+        "question": "Where is the performance?",
+        "ground_truth_answer": "outdoor",
+        "predicted_answer": "The performance is primarily outdoors, likely part of a festive or celebratory occasion, such as a festival or music event.",
+        "video_duration_sec": 172.12
+    }
+]

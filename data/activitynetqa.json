@@ -1,0 +1,352 @@
+[
+    {
+        "video_id": "OFTkwnSh-sQ",
+        "question": "where is the person in red clothes",
+        "ground_truth_answer": "stadium",
+        "predicted_answer": "The person in red clothes is featured throughout the video at the long jump event, primarily seen sprinting down the track, walking on the track field, and participating in jumps. Specific instances include a runner in a red uniform at the 20-second mark and another athlete in red at the 70-second mark, indicating their active involvement in the competition.",
+        "video_duration_sec": 95.841
+    },
+    {
+        "video_id": "wE9sQbGdeAk",
+        "question": "what is behind the diver",
+        "ground_truth_answer": "oxygen bottle",
+        "predicted_answer": "Bottle containing oxygen",
+        "video_duration_sec": 109.4
+    },
+    {
+        "video_id": "er5jUsRr4y0",
+        "question": "what is behind the fat man",
+        "ground_truth_answer": "mirror",
+        "predicted_answer": "Mirror",
+        "video_duration_sec": 119.3
+    },
+    {
+        "video_id": "QX5e5Mla660",
+        "question": "what is on the right of the person in a green coat",
+        "ground_truth_answer": "audience",
+        "predicted_answer": "Audience is seated on the right of the person wearing a green coat.",
+        "video_duration_sec": 184.75123333333335
+    },
+    {
+        "video_id": "zA2zZPyYLlU",
+        "question": "what is behind the ship in the video",
+        "ground_truth_answer": "spider man",
+        "predicted_answer": "Fictional character Spiderman.",
+        "video_duration_sec": 76.16
+    },
+    {
+        "video_id": "BhgcXqWQhkQ",
+        "question": "what is behind the people on the stage",
+        "ground_truth_answer": "steps",
+        "predicted_answer": "Stairs.",
+        "video_duration_sec": 189.76
+    },
+    {
+        "video_id": "dHKeNK1uWUg",
+        "question": "what is in front of the person in red coat",
+        "ground_truth_answer": "cobra",
+        "predicted_answer": "A reptilian creature particularly a snake or a cobra.",
+        "video_duration_sec": 79.1
+    },
+    {
+        "video_id": "8AUTKSqcmiM",
+        "question": "what is in front of the archery player",
+        "ground_truth_answer": "target",
+        "predicted_answer": "Target, which they aim at during the competition.",
+        "video_duration_sec": 98.699
+    },
+    {
+        "video_id": "09ocXmGF-T4",
+        "question": "what is in front of the boy",
+        "ground_truth_answer": "carrot",
+        "predicted_answer": "In front of the boy, there is a carrot that he is holding, along with potatoes and other food items on the kitchen counter.",
+        "video_duration_sec": 47.52
+    },
+    {
+        "video_id": "1xtKGlUp4Vg",
+        "question": "what is on the right of the person in gray clothes",
+        "ground_truth_answer": "hair drier",
+        "predicted_answer": "An electronic hair drier is seen on the right of the person in gray clothes.",
+        "video_duration_sec": 138.40493333333333
+    },
+    {
+        "video_id": "QX5e5Mla660",
+        "question": "what is the guy in white short sleeves doing at the start of the video",
+        "ground_truth_answer": "dance",
+        "predicted_answer": "At the start of the video, the guy in the white shirt is performing actively on stage as a dancer.",
+        "video_duration_sec": 184.75123333333335
+    },
+    {
+        "video_id": "LsVCwr6qPmY",
+        "question": "what happened after the person in blue ironed his collar",
+        "ground_truth_answer": "ironing sleeves",
+        "predicted_answer": "After the person in blue ironed his collar, the video continued to showcase various ironing techniques and the use of different ironing tools on wrinkled garments, emphasizing the effectiveness of steam irons and garment steamers. It also highlighted the operation of automated ironing stations, illustrating the technology involved in garment care.",
+        "video_duration_sec": 154.52
+    },
+    {
+        "video_id": "LzPppxSWYNY",
+        "question": "what happens to the athlete before he jump",
+        "ground_truth_answer": "run up",
+        "predicted_answer": "Before the jump, the athlete prepares by kneeling in the sand pit and running up towards it.",
+        "video_duration_sec": 92.56
+    },
+    {
+        "video_id": "jEOtcfk220s",
+        "question": "what happens after the blue team scored",
+        "ground_truth_answer": "blue team serve",
+        "predicted_answer": "The summary does not provide specific details about what happens after the blue team scores. It primarily focuses on the volleyball game and transitions to a scene of children playing basketball towards the end. Therefore, any events following a score by the blue team are not mentioned.",
+        "video_duration_sec": 41.166666666666664
+    },
+    {
+        "video_id": "2CegApogJd4",
+        "question": "what happened to the person in blue after the game",
+        "ground_truth_answer": "clap with your teammates",
+        "predicted_answer": "After the game is played, the person in blue is seen clapping his hands along with his teammates.",
+        "video_duration_sec": 124.625
+    },
+    {
+        "video_id": "RXT17X7lRoQ",
+        "question": "what happened before the start of the game",
+        "ground_truth_answer": "referee throws the ball",
+        "predicted_answer": "Before the start of the game, the young players participated in practice sessions to hone their skills on the grassy field, where they prepared for formal matches. There were also scenes of camaraderie among team members, with players posing together and celebrating their achievements, as well as a pre-game gathering with a referee present.",
+        "video_duration_sec": 123.5
+    },
+    {
+        "video_id": "lYP05IRcOPE",
+        "question": "what is the gender of the first drifting person",
+        "ground_truth_answer": "male",
+        "predicted_answer": "The gender of the first drifting person is male.",
+        "video_duration_sec": 26.026
+    },
+    {
+        "video_id": "eQ0sW4hJ9zU",
+        "question": "what do you need to do before you start a new mower",
+        "ground_truth_answer": "plug igniter",
+        "predicted_answer": "Before starting a new mower, the plug is needed to be ignited, this reflects operational readiness and safety.",
+        "video_duration_sec": 179.24573333333333
+    },
+    {
+        "video_id": "7BUr2cN8CLs",
+        "question": "what color is the blond woman's clothes at the end of the video",
+        "ground_truth_answer": "black",
+        "predicted_answer": "The blond woman is wearing clothes of black color at the end of the video.",
+        "video_duration_sec": 32.265566666666665
+    },
+    {
+        "video_id": "ej_fSoVO0R8",
+        "question": "what color is the cake before it is coated with orange skin",
+        "ground_truth_answer": "white",
+        "predicted_answer": "The color of the cake was white before it was coated with an orange skin.",
+        "video_duration_sec": 229.6
+    },
+    {
+        "video_id": "idkQqlwyff8",
+        "question": "what is above the red boy at the beginning of the video",
+        "ground_truth_answer": "star shaped toy",
+        "predicted_answer": "At the beginning of the video, above the red boy is the colorful pi\u00f1ata.",
+        "video_duration_sec": 51.93333333333333
+    },
+    {
+        "video_id": "s6fEIuHPJ4Y",
+        "question": "what is in front of the athlete at the beginning of the video",
+        "ground_truth_answer": "protective net",
+        "predicted_answer": "At the beginning of the video, the athlete is approaching a green protective net as he prepares for the hammer throw event.",
+        "video_duration_sec": 49.401
+    },
+    {
+        "video_id": "pmmQuksmTvw",
+        "question": "what is in front of the runner when he starts",
+        "ground_truth_answer": "hopping viaduct",
+        "predicted_answer": "In front of the runner when he starts is the pole vault setup, which includes the pole vault bar and a landing mat below it.",
+        "video_duration_sec": 143.2
+    },
+    {
+        "video_id": "paRAKx8svJ8",
+        "question": "what is the largest number that appears after the video background",
+        "ground_truth_answer": "9",
+        "predicted_answer": "The largest number appearing in the video is 9.",
+        "video_duration_sec": 102.936
+    },
+    {
+        "video_id": "pcLGX5qvUcI",
+        "question": "what is in front of the person who wears skates at the beginning of the video",
+        "ground_truth_answer": "goal",
+        "predicted_answer": "In front of the person who wears skates at the beginning of the video are numerous advertisements visible on the glass barrier surrounding the ice rink.",
+        "video_duration_sec": 31.031
+    },
+    {
+        "video_id": "2-AMrzL7V-U",
+        "question": "what is in front of the person wearing red clothes during the long jump",
+        "ground_truth_answer": "bunker",
+        "predicted_answer": "In front of the person wearing red clothes during the long jump, there is a bunker with a sign indicating \"18 Feet 9 Inches.\"",
+        "video_duration_sec": 114.28083333333333
+    },
+    {
+        "video_id": "qlK-c7hRqcA",
+        "question": "what does the man with the striped shirt do when he arrived near the tire",
+        "ground_truth_answer": "squat",
+        "predicted_answer": "The man in the striped shirt is seen squatting cautiously around a corner in the paintball arena.",
+        "video_duration_sec": 174.7746
+    },
+    {
+        "video_id": "bBRzBh0gAZQ",
+        "question": "where did the participants drop in after their takeoff",
+        "ground_truth_answer": "bunker",
+        "predicted_answer": "The participants landed in a sand bunker after their takeoff.",
+        "video_duration_sec": 86.88
+    },
+    {
+        "video_id": "iuXjatyFcwo",
+        "question": "what happens when the person in blue shorts raises the pole to the top of his head",
+        "ground_truth_answer": "stand up",
+        "predicted_answer": "When the person in blue shorts raises the barbell overhead, the person stands up with another man observing nearby.",
+        "video_duration_sec": 53.2532
+    },
+    {
+        "video_id": "m73Cod-PmMQ",
+        "question": "what happens when the person in the black scarf shows up in front of the camera",
+        "ground_truth_answer": "turn and half squat down",
+        "predicted_answer": "The person in the black scarf performs a half squat when the camera shows up.",
+        "video_duration_sec": 105.3052
+    },
+    {
+        "video_id": "FKtYeu2bJpA",
+        "question": "how many chairs are there in video",
+        "ground_truth_answer": "3",
+        "predicted_answer": "There are three visible chairs in the video.",
+        "video_duration_sec": 151.367
+    },
+    {
+        "video_id": "3Nd3Aai1bVA",
+        "question": "how many athletes are there in the first match",
+        "ground_truth_answer": "7",
+        "predicted_answer": "The summary gives inference of 7 athletes.",
+        "video_duration_sec": 130.76396666666668
+    },
+    {
+        "video_id": "Jhcis4S2Vsg",
+        "question": "how many discus are there for each contestant",
+        "ground_truth_answer": "8",
+        "predicted_answer": "There are 8 discus alloted to each contestant.",
+        "video_duration_sec": 72.1721
+    },
+    {
+        "video_id": "1kkc9hDshP4",
+        "question": "how many people are dancing on the stage",
+        "ground_truth_answer": "3",
+        "predicted_answer": "The number of people dancing on the stage varies between three and four.",
+        "video_duration_sec": 220.0198
+    },
+    {
+        "video_id": "LWt2FuU0uC4",
+        "question": "how many shot putter are there in the video",
+        "ground_truth_answer": "8",
+        "predicted_answer": "The total count of shot putters in the video are eight.",
+        "video_duration_sec": 153.12
+    },
+    {
+        "video_id": "1px5LTVIR3A",
+        "question": "how many people are there in the blue dress",
+        "ground_truth_answer": "7",
+        "predicted_answer": "There are seven people wearing blue dresses throughout the video.",
+        "video_duration_sec": 224.22400000000002
+    },
+    {
+        "video_id": "mVAP-WyEc7w",
+        "question": "how many knives are there in the video",
+        "ground_truth_answer": "3",
+        "predicted_answer": "There are three visible knives and a cutting board.",
+        "video_duration_sec": 149.3492
+    },
+    {
+        "video_id": "fSBX-gjPblw",
+        "question": "how many little girls are involved in shooting in the video",
+        "ground_truth_answer": "3",
+        "predicted_answer": "There are three little girls shooting and aiming in the video.",
+        "video_duration_sec": 33.935
+    },
+    {
+        "video_id": "eKdtOKqLMRE",
+        "question": "how many drums are there in the drum",
+        "ground_truth_answer": "5",
+        "predicted_answer": "There are five visible drums in the video.",
+        "video_duration_sec": 149.149
+    },
+    {
+        "video_id": "Em4ekFj4XIs",
+        "question": "how many flying discs are there in the video",
+        "ground_truth_answer": "8",
+        "predicted_answer": "TThere are eight frisbees or flying discs throughout the video.",
+        "video_duration_sec": 166.234
+    },
+    {
+        "video_id": "6H0D8VaIli0",
+        "question": "how many people are holding an instrument in the video",
+        "ground_truth_answer": "3",
+        "predicted_answer": "There are three people holding different sounding instruments throughout the video.",
+        "video_duration_sec": 175.36
+    },
+    {
+        "video_id": "FxpP7lqvm30",
+        "question": "what is the person with a microphone doing",
+        "ground_truth_answer": "explain games rule",
+        "predicted_answer": "The person with a microphone is likely interacting with or commentating on the ongoing tug-of-war events, particularly while two children compete.",
+        "video_duration_sec": 97.8
+    },
+    {
+        "video_id": "JGPhQX97OSE",
+        "question": "how many people are there playing the drums",
+        "ground_truth_answer": "7",
+        "predicted_answer": "There are seven people seen playing drums throughout the video.",
+        "video_duration_sec": 53.46666666666667
+    },
+    {
+        "video_id": "OysON6LbF6Y",
+        "question": "what is the instrument in the hands of men",
+        "ground_truth_answer": "guitar",
+        "predicted_answer": "The instrument in the hands of the man is a guitar.",
+        "video_duration_sec": 120.45366666666666
+    },
+    {
+        "video_id": "ZsVfa3JIUNU",
+        "question": "what's the guy doing with the microphone",
+        "ground_truth_answer": "interview",
+        "predicted_answer": "The guy with the microphone is conducting interviews with various individuals, engaging them in conversation and highlighting interactions within a lively street atmosphere.",
+        "video_duration_sec": 101.52
+    },
+    {
+        "video_id": "bYxVbXzQToI",
+        "question": "how many people are playing the guitar in the video",
+        "ground_truth_answer": "2",
+        "predicted_answer": "There are two guitarists visible throughout the video.",
+        "video_duration_sec": 89.73333333333333
+    },
+    {
+        "video_id": "e-Xf13exY4E",
+        "question": "what is the man's instrument in black",
+        "ground_truth_answer": "drum kit",
+        "predicted_answer": "The man's instrument is the drum set.",
+        "video_duration_sec": 92.968
+    },
+    {
+        "video_id": "oGU7m7rCZ-Y",
+        "question": "what is this instrument in the video",
+        "ground_truth_answer": "sax",
+        "predicted_answer": "The instrument in the video is the saxophone.",
+        "video_duration_sec": 120.56
+    },
+    {
+        "video_id": "qWgF9hxNbP8",
+        "question": "what is the occupation of a person who takes a whistle",
+        "ground_truth_answer": "referee",
+        "predicted_answer": "The occupation of a person who takes a whistle, particularly in the context of a wrestling match, is a referee.",
+        "video_duration_sec": 17.8
+    },
+    {
+        "video_id": "e-Xf13exY4E",
+        "question": "how many drums did the white men beat",
+        "ground_truth_answer": "2",
+        "predicted_answer": "The summary does not specify the number of drums that the musicians played. It mentions one musician playing congas and the other seated at a drum set or snare drum, but does not provide a specific count of drums.",
+        "video_duration_sec": 92.968
+    }
+]
