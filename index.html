@@ -3,203 +3,254 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Query-Adaptive VideoQA Framework</title>
-<meta name="description" content="A query-adaptive, branch-selective VideoQA RAG pipeline: a classifier picks one of five branches; only that branch runs.">
+<meta name="theme-color" content="#f7f8fa">
+<title>Query-Adaptive VideoQA</title>
+<meta name="description" content="A query-adaptive, branch-selective VideoQA retrieval-augmented generation pipeline.">
 <style>
 :root {
   --paper: #ffffff;
-  --ink: #1a1d21;
-  --muted: #5b6470;
-  --line: #d9dee4;
-  --accent: #1d4ed8;
-  --accent-soft: #dbe4fb;
-  --card: #f6f8fa;
-  --code: #eef1f4;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #101418;
-    --ink: #e8ebee;
-    --muted: #a7b0bb;
-    --line: #2b333c;
-    --accent: #9db9f2;
-    --accent-soft: #1e2c4d;
-    --card: #161c22;
-    --code: #1c232b;
-  }
+  --band: #f5f6f8;
+  --ink: #17191d;
+  --muted: #626975;
+  --line: #e2e5e9;
+  --blue: #3777c8;
+  --blue-dark: #225993;
+  --green: #29945f;
+  --purple: #8067bd;
+  --orange: #c97d35;
+  --pink: #bf5b84;
+  --shadow: 0 12px 35px rgba(27, 39, 54, 0.08);
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: var(--paper);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  background: var(--paper);
+  font-family: "Google Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
 }
-.wrap { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem; }
-.skip {
-  position: absolute; left: -999px; top: 0; background: var(--accent);
-  color: #fff; padding: 0.5rem 1rem; z-index: 10;
-}
+a { color: var(--blue-dark); }
+a:hover { color: var(--blue); }
+a:focus-visible { outline: 3px solid #9ec4f3; outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; z-index: 10; padding: .6rem 1rem; background: var(--ink); color: #fff; }
 .skip:focus { left: 0; }
-.site-header { border-bottom: 1px solid var(--line); padding: 2.5rem 0 1.5rem; }
-.kicker { color: var(--muted); margin: 0 0 0.25rem; }
-h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.75rem; letter-spacing: -0.01em; }
-.lede { font-size: 1.1rem; max-width: 44rem; }
-.nav { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; padding: 0; margin: 1rem 0; }
-.nav a { color: var(--accent); }
-.meta { color: var(--muted); font-size: 0.95rem; }
-main section { padding: 2rem 0; border-bottom: 1px solid var(--line); }
-h2 { font-size: 1.5rem; margin: 0 0 1rem; }
-h3 { font-size: 1.15rem; margin: 1.75rem 0 0.75rem; }
-code { background: var(--code); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.92em; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.1rem; }
-.card h3 { margin-top: 0; }
-.card p { margin: 0.5rem 0; }
-.figure { margin: 1.5rem 0; }
-.figure img { max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
-.figure figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
-.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
-.btn {
-  display: inline-block; padding: 0.6rem 1.1rem; border-radius: 8px;
-  background: var(--accent); color: #fff; text-decoration: none;
-  font-weight: 600; font-size: 0.95rem; border: 1px solid var(--accent);
+.container { width: min(1060px, calc(100% - 2.5rem)); margin: 0 auto; }
+.topbar { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); position: sticky; top: 0; z-index: 5; }
+.topbar-inner { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { color: var(--ink); font-weight: 800; text-decoration: none; letter-spacing: -.02em; }
+.brand-mark { display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: .45rem; border-radius: 8px; color: #fff; background: linear-gradient(135deg, #4f8bd6, #7154b4); font-size: .85rem; }
+.nav { display: flex; flex-wrap: wrap; gap: .2rem .95rem; margin: 0; padding: 0; list-style: none; font-size: .91rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+.hero { padding: 5.2rem 0 4.3rem; text-align: center; background: radial-gradient(circle at 50% 0%, #eef5ff 0, #fff 48%); }
+.eyebrow { margin: 0 0 .9rem; color: var(--blue-dark); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+h1 { max-width: 900px; margin: 0 auto 1rem; font-size: clamp(2.35rem, 6vw, 4.65rem); line-height: 1.06; letter-spacing: -.065em; }
+.hero h1 span { background: linear-gradient(100deg, #235a99 10%, #6749a6 52%, #be5c82 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.subtitle { max-width: 720px; margin: 0 auto; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.32rem); line-height: 1.55; }
+.hero-meta { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin: 1.5rem auto 0; }
+.tag { display: inline-flex; align-items: center; gap: .35rem; border: 1px solid var(--line); border-radius: 999px; padding: .28rem .72rem; background: #fff; color: var(--muted); font-size: .82rem; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: 1.8rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 42px; padding: .55rem 1.05rem; border: 1px solid var(--ink); border-radius: 999px; background: var(--ink); color: #fff; font-weight: 700; text-decoration: none; font-size: .92rem; }
+.button:hover { background: #30343a; color: #fff; }
+.button.light { border-color: var(--line); background: #fff; color: var(--ink); }
+.button.light:hover { border-color: #b6bdc7; background: #f6f7f9; color: var(--ink); }
+.section { padding: 4.5rem 0; }
+.section.band { background: var(--band); border-top: 1px solid #edf0f2; border-bottom: 1px solid #edf0f2; }
+.section-heading { margin-bottom: 2rem; text-align: center; }
+.section-heading h2 { margin: 0 0 .45rem; font-size: clamp(1.75rem, 3vw, 2.35rem); letter-spacing: -.04em; }
+.section-heading p { max-width: 700px; margin: 0 auto; color: var(--muted); }
+.prose { max-width: 820px; margin: 0 auto; font-family: Georgia, "Times New Roman", serif; font-size: 1.07rem; }
+.prose strong { font-family: "Google Sans", "Segoe UI", sans-serif; }
+.figure { margin: 2.4rem auto 0; max-width: 950px; text-align: center; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.figure figcaption { max-width: 760px; margin: .9rem auto 0; color: var(--muted); font-size: .9rem; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 780px; margin: 2.3rem auto 0; }
+.stat { padding: 1.25rem 1rem; border: 1px solid var(--line); border-radius: 13px; background: #fff; text-align: center; }
+.stat strong { display: block; color: var(--blue-dark); font-size: 2rem; line-height: 1.1; }
+.stat span { color: var(--muted); font-size: .84rem; }
+.pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; counter-reset: stage; }
+.stage { position: relative; min-height: 150px; padding: 1.25rem; border: 1px solid var(--line); border-radius: 13px; background: #fff; box-shadow: 0 4px 15px rgba(30, 42, 56, .035); }
+.stage::before { counter-increment: stage; content: "0" counter(stage); display: block; margin-bottom: 1.05rem; color: var(--blue); font-size: .77rem; font-weight: 800; letter-spacing: .1em; }
+.stage h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.stage p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.stage.always { border-top: 3px solid var(--green); }
+.stage.route { border-top: 3px solid var(--purple); }
+.branch-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.branch { padding: 1.45rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 4px 15px rgba(30, 42, 56, .035); }
+.branch:last-child { grid-column: 1 / -1; }
+.branch h3 { display: flex; align-items: center; gap: .55rem; margin: 0 0 .65rem; font-size: 1.2rem; }
+.branch h3::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--branch-color, var(--blue)); box-shadow: 0 0 0 5px color-mix(in srgb, var(--branch-color, var(--blue)) 13%, transparent); }
+.branch p { margin: .42rem 0; color: var(--muted); font-size: .92rem; }
+.branch strong { color: var(--ink); }
+.branch.temporal { --branch-color: var(--blue); }
+.branch.spatial { --branch-color: var(--purple); }
+.branch.motion { --branch-color: var(--orange); }
+.branch.counting { --branch-color: var(--green); }
+.branch.audio { --branch-color: var(--pink); }
+.code-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.code-card { display: flex; flex-direction: column; align-items: flex-start; padding: 1.35rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.code-card h3 { margin: 0 0 .45rem; font-size: 1.08rem; }
+.code-card p { flex: 1; margin: 0 0 1rem; color: var(--muted); font-size: .92rem; }
+.code-card .button { font-size: .84rem; }
+.citation { max-width: 850px; margin: 0 auto; }
+pre { margin: 0; padding: 1.25rem; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: #f7f8fa; color: #394150; font: .83rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+footer { padding: 2.2rem 0; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .86rem; }
+code { padding: .12em .3em; border-radius: 4px; background: #f0f2f5; color: #4e3e7b; font-size: .88em; }
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #111418; --band: #171b20; --ink: #edf0f3; --muted: #aeb6c0; --line: #2b333c; --shadow: 0 12px 35px rgba(0,0,0,.22); }
+  .topbar { background: rgba(17,20,24,.96); }
+  .hero { background: radial-gradient(circle at 50% 0%, #1b2940 0, var(--paper) 53%); }
+  .tag, .button.light, .stat, .stage, .branch, .code-card { background: #171b20; }
+  .button.light:hover { background: #20262d; }
+  pre, code { background: #1d232a; color: #d8c8ff; }
 }
-.btn:hover { filter: brightness(1.1); }
-.btn-secondary { background: transparent; color: var(--accent); }
-.btn-secondary:hover { background: var(--accent-soft); filter: none; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-@media (max-width: 40rem) {
-  h1 { font-size: 1.6rem; }
+@media (max-width: 700px) {
+  .container { width: min(100% - 1.4rem, 1060px); }
+  .topbar-inner { align-items: flex-start; flex-direction: column; padding: .8rem 0; }
+  .nav { gap: .25rem .7rem; }
+  .hero { padding: 3.7rem 0 3.3rem; }
+  .section { padding: 3.2rem 0; }
+  .stats, .pipeline, .branch-grid, .code-grid { grid-template-columns: 1fr; }
+  .branch:last-child { grid-column: auto; }
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <p class="kicker">Video question answering &middot; RAG pipeline</p>
-    <h1>Query-adaptive VideoQA framework</h1>
-    <p class="lede">A classifier assigns each question to one of five branches &mdash; temporal, spatial, spatio-temporal, counting, audio &mdash; and only that branch runs. Retrieval and answer generation always run.</p>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">VQ</span>VideoQA Framework</a>
     <nav aria-label="Sections">
       <ul class="nav">
         <li><a href="#overview">Overview</a></li>
-        <li><a href="#architecture">Architecture</a></li>
-        <li><a href="#branches">Branch details</a></li>
+        <li><a href="#architecture">Framework</a></li>
+        <li><a href="#branches">Branches</a></li>
         <li><a href="#code">Code</a></li>
+        <li><a href="#citation">Citation</a></li>
       </ul>
     </nav>
-    <p class="meta">Evaluation covers ActivityNetQA, MovieChat-1K, and MusicAVQA samples.</p>
   </div>
 </header>
 
-<main id="main" class="wrap">
+<header id="top" class="hero">
+  <div class="container">
+    <p class="eyebrow">Video question answering &middot; retrieval-augmented generation</p>
+    <h1><span>Query-adaptive</span><br>VideoQA framework</h1>
+    <p class="subtitle">A branch-selective pipeline that routes each question to the evidence it needs&mdash;temporal, spatial, motion, counting, or audio&mdash;without running the rest.</p>
+    <div class="hero-meta" aria-label="Project characteristics">
+      <span class="tag">Five specialized branches</span>
+      <span class="tag">Hybrid retrieval</span>
+      <span class="tag">Per-video caching</span>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="#architecture">Explore the framework <span aria-hidden="true">↓</span></a>
+      <a class="button light" href="./notebooks/FINAL_batch_1_with_eval.ipynb" download>View final notebook</a>
+    </div>
+  </div>
+</header>
 
-<section id="overview" aria-labelledby="overview-h">
-  <h2 id="overview-h">Overview</h2>
-  <p><strong>Problem.</strong> Video questions need different evidence: ordering needs scene sequences, layout needs keyframe positions, movement needs tracks over time, &ldquo;how many&rdquo; needs de-duplicated instances, and speech or sound needs transcripts and audio tags. Running every model for every question costs GPU and API calls that the question does not need.</p>
-  <p><strong>Idea.</strong> A query classifier (GPT-4o mini, zero-shot prompt) assigns each question to exactly one of five categories: temporal, spatial, spatio-temporal, counting, or audio. Only the matching branch executes; the other four are never invoked and their models are never loaded. Results per video are cached in a per-video ChromaDB collection, so repeated questions about the same video reuse previously computed chunks. Hybrid retrieval (dense + lexical) selects evidence, and an answer generator (GPT-4o mini with a category-specific instruction) produces the final answer.</p>
-  <p>If the classifier returns an invalid label, the system falls back to <code>spatial</code>.</p>
-  <figure class="figure">
-    <img src="./reel.png" alt="Film-strip video frames with an audio waveform timeline, followed by two question-and-answer examples: a counting question about distinctly colored dresses and a temporal question about whether a ballroom dance sequence is historical or modern.">
-    <figcaption>Example inputs and outputs: sampled film-strip frames over an audio waveform timeline, with a counting question (&ldquo;how many distinctly colored dresses&rdquo;) and a temporal question (&ldquo;historical era or modern times&rdquo;) and the system&rsquo;s answers.</figcaption>
-  </figure>
-</section>
-
-<section id="architecture" aria-labelledby="arch-h">
-  <h2 id="arch-h">Architecture</h2>
-  <p>Classifier and answer generation always run. Exactly one of the five branches runs per question.</p>
-  <ol>
-    <li><strong>Input ingestion.</strong> Load a JSON list of <code>(video_id, query)</code> pairs; missing videos are logged and skipped.</li>
-    <li><strong>Query classification (always runs).</strong> GPT-4o mini assigns one of five labels; invalid labels fall back to <code>spatial</code>.</li>
-    <li><strong>Cache check (always runs).</strong> Reuse per-video ChromaDB chunks already tagged with the classified category.</li>
-    <li><strong>Conditional branch (exactly one runs).</strong> Temporal, spatial, spatio-temporal, counting, or audio &mdash; see Branch details.</li>
-    <li><strong>Embedding and storage (always runs).</strong> BGE-large-en-v1.5 embeds the branch output into the per-video ChromaDB collection.</li>
-    <li><strong>Hybrid retrieval (always runs).</strong> BGE dense search filtered to the routed category, re-ranked with BM25.</li>
-    <li><strong>Answer generation (always runs).</strong> GPT-4o mini with a category-specific instruction over the retrieved chunks.</li>
-    <li><strong>Output.</strong> Answer, category, video id, query, and ground truth when available, appended to the results JSON.</li>
-  </ol>
-</section>
-
-<section id="branches" aria-labelledby="br-h">
-  <h2 id="br-h">Branch details</h2>
-  <div class="cards">
-    <article class="card">
-      <h3>Temporal</h3>
-      <p><strong>Trigger:</strong> ordering, sequence, before/after timing.</p>
-      <p><strong>Models:</strong> PySceneDetect (content-based scene detection, no ML weights); GPT-4o-mini captioner, default instruction &ldquo;Describe this scene in one sentence.&rdquo;</p>
-      <p><strong>Output:</strong> timestamped, ordered list of scene captions (one mid-scene frame per scene).</p>
-      <p><strong>Execution:</strong> local + API, only if classified temporal.</p>
-    </article>
-    <article class="card">
-      <h3>Spatial</h3>
-      <p><strong>Trigger:</strong> layout or position at a single moment. Also the fallback category.</p>
-      <p><strong>Models:</strong> CLIP ViT-B/32 (<code>openai/clip-vit-base-patch32</code>) keyframe selection with K-Means (k=8); GPT-4o-mini captioner with layout instruction &ldquo;Describe the layout and position of objects in this frame.&rdquo;; Grounding DINO-tiny (<code>IDEA-Research/grounding-dino-tiny</code>), raw query as detection target.</p>
-      <p><strong>Output:</strong> per-keyframe layout captions plus grounded object list.</p>
-      <p><strong>Execution:</strong> local + API, only if classified spatial.</p>
-    </article>
-    <article class="card">
-      <h3>Spatio-temporal</h3>
-      <p><strong>Trigger:</strong> how something moved or changed position over time.</p>
-      <p><strong>Models:</strong> RT-DETR R50VD (<code>PekingU/rtdetr_r50vd_coco_o365</code>); custom IoU / SORT-style tracker (Hungarian assignment, local).</p>
-      <p><strong>Output:</strong> per-track start position, end position, and time span.</p>
-      <p><strong>Execution:</strong> local only, only if classified spatio-temporal.</p>
-    </article>
-    <article class="card">
-      <h3>Counting</h3>
-      <p><strong>Trigger:</strong> &ldquo;how many&rdquo; questions.</p>
-      <p><strong>Models:</strong> RT-DETR R50VD with the same IoU tracker, used to de-duplicate repeated sightings into one tracked instance per class.</p>
-      <p><strong>Output:</strong> exact unique-instance count per object class, with one supporting frame per class. Generator instruction: report the exact number, do not estimate.</p>
-      <p><strong>Execution:</strong> local only, only if classified counting.</p>
-    </article>
-    <article class="card">
-      <h3>Audio</h3>
-      <p><strong>Trigger:</strong> speech, dialogue, or non-speech sound events.</p>
-      <p><strong>Models:</strong> Whisper large-v3-turbo (<code>openai/whisper-large-v3-turbo</code>) timestamped transcription; AST (<code>MIT/ast-finetuned-audioset-10-10-0.4593</code>) top-5 sound-event tags.</p>
-      <p><strong>Output:</strong> timestamped transcript segments annotated with audio event tags. Generator instruction: use the transcript and audio tags.</p>
-      <p><strong>Execution:</strong> local only, only if classified audio.</p>
-    </article>
+<main id="main">
+<section id="overview" class="section" aria-labelledby="overview-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="overview-h">One question, one evidence path</h2>
+      <p>The system adapts its computation to the question instead of processing every modality for every video.</p>
+    </div>
+    <div class="prose">
+      <p><strong>Motivation.</strong> Video questions need different evidence: ordering needs scene sequences, layout needs keyframe positions, movement needs tracks over time, &ldquo;how many&rdquo; needs de-duplicated instances, and speech or sound needs transcripts and audio tags. Running every model for every question spends GPU and API resources on evidence the question does not need.</p>
+      <p><strong>Approach.</strong> GPT-4o mini assigns each question to exactly one category. Only the matching branch executes; the other four are not invoked. The resulting evidence is embedded into a per-video ChromaDB collection, retrieved with dense and lexical signals, and passed to a category-aware answer generator. Invalid classifier labels fall back to <code>spatial</code>.</p>
+    </div>
+    <div class="stats" aria-label="Evaluation overview">
+      <div class="stat"><strong>5</strong><span>specialized branches</span></div>
+      <div class="stat"><strong>3</strong><span>evaluation datasets</span></div>
+      <div class="stat"><strong>150</strong><span>committed query records</span></div>
+    </div>
+    <figure class="figure">
+      <img src="./reel.png" alt="Film-strip video frames with an audio waveform timeline and two question-and-answer examples.">
+      <figcaption>Sampled frames and an audio timeline illustrate the kinds of visual, temporal, counting, and audio evidence routed by the framework.</figcaption>
+    </figure>
   </div>
 </section>
 
-
-
-
-
-<section id="code" aria-labelledby="code-h">
-  <h2 id="code-h">Code</h2>
-  <p>Browse or download the pipeline notebooks: three ablations and the final end-to-end code.</p>
-  <div class="cards">
-    <article class="card">
-      <h3>Ablation 1 &mdash; No cache</h3>
-      <p>Runs without the per-video ChromaDB cache; every question recomputes its branch from scratch.</p>
-      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation1_no_cache.ipynb" download>View / Download code</a></div>
-    </article>
-    <article class="card">
-      <h3>Ablation 2 &mdash; No reranker</h3>
-      <p>Dense retrieval only; skips the BM25 re-ranking step before answer generation.</p>
-      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation2_no_reranker.ipynb" download>View / Download code</a></div>
-    </article>
-    <article class="card">
-      <h3>Ablation 3 &mdash; Unrestricted retrieval</h3>
-      <p>Retrieves across all categories instead of filtering to the routed branch category.</p>
-      <div class="btn-row"><a class="btn btn-secondary" href="./notebooks/ablation3_unrestricted_retrieval.ipynb" download>View / Download code</a></div>
-    </article>
-    <article class="card">
-      <h3>Final pipeline</h3>
-      <p>Full query-adaptive pipeline with cache, hybrid retrieval, and evaluation.</p>
-      <div class="btn-row"><a class="btn" href="./notebooks/FINAL_batch_1_with_eval.ipynb" download>View / Download final code</a></div>
-    </article>
+<section id="architecture" class="section band" aria-labelledby="architecture-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="architecture-h">Framework overview</h2>
+      <p>Classification and answer generation always run. Exactly one evidence branch runs for each question.</p>
+    </div>
+    <div class="pipeline">
+      <article class="stage always"><h3>Input ingestion</h3><p>Load query/video pairs and resolve the source video.</p></article>
+      <article class="stage route"><h3>Query routing</h3><p>GPT-4o mini selects temporal, spatial, motion, counting, or audio.</p></article>
+      <article class="stage always"><h3>Cache check</h3><p>Reuse branch chunks already stored for this video and category.</p></article>
+      <article class="stage route"><h3>One branch</h3><p>Run only the specialized local and API tools needed by the query.</p></article>
+      <article class="stage always"><h3>Embed &amp; store</h3><p>BGE encodes branch output into a persistent ChromaDB collection.</p></article>
+      <article class="stage always"><h3>Hybrid retrieval</h3><p>Dense search is filtered by category and re-ranked with BM25.</p></article>
+      <article class="stage always"><h3>Answer generation</h3><p>A category-specific GPT-4o mini instruction grounds the response.</p></article>
+      <article class="stage always"><h3>Structured output</h3><p>Save the answer, route, video, query, and optional ground truth.</p></article>
+    </div>
   </div>
 </section>
 
+<section id="branches" class="section" aria-labelledby="branches-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="branches-h">Five ways to understand a video</h2>
+      <p>Each branch creates text evidence designed for a distinct reasoning pattern.</p>
+    </div>
+    <div class="branch-grid">
+      <article class="branch temporal"><h3>Temporal</h3><p><strong>Trigger:</strong> ordering, sequence, and before/after timing.</p><p><strong>Stack:</strong> PySceneDetect, ffmpeg, and GPT-4o-mini scene captioning.</p><p><strong>Evidence:</strong> timestamped, ordered scene captions from representative mid-scene frames.</p></article>
+      <article class="branch spatial"><h3>Spatial</h3><p><strong>Trigger:</strong> layout, position, or where something appears.</p><p><strong>Stack:</strong> CLIP keyframe selection, K-Means, GPT-4o-mini layout captions, and Grounding DINO-tiny.</p><p><strong>Evidence:</strong> keyframe descriptions and grounded object labels.</p></article>
+      <article class="branch motion"><h3>Spatio-temporal</h3><p><strong>Trigger:</strong> how something moved or changed position over time.</p><p><strong>Stack:</strong> RT-DETR R50VD and a custom IoU/Hungarian tracker.</p><p><strong>Evidence:</strong> per-track start position, end position, and time span.</p></article>
+      <article class="branch counting"><h3>Counting</h3><p><strong>Trigger:</strong> &ldquo;how many&rdquo; questions.</p><p><strong>Stack:</strong> RT-DETR with the same tracker to de-duplicate repeated sightings.</p><p><strong>Evidence:</strong> exact unique-instance counts with supporting frame metadata.</p></article>
+      <article class="branch audio"><h3>Audio</h3><p><strong>Trigger:</strong> speech, dialogue, or non-speech sound events.</p><p><strong>Stack:</strong> Whisper large-v3-turbo and AST AudioSet tagging.</p><p><strong>Evidence:</strong> timestamped transcript segments annotated with sound-event tags.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section band" aria-labelledby="datasets-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="datasets-h">Evaluation snapshot</h2>
+      <p>Committed result samples cover three public VideoQA datasets.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>50</strong><span>ActivityNetQA records</span></div>
+      <div class="stat"><strong>50</strong><span>MovieChat-1K records</span></div>
+      <div class="stat"><strong>50</strong><span>MusicAVQA records</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="code" class="section" aria-labelledby="code-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="code-h">Code and ablations</h2>
+      <p>Browse the Colab-oriented notebooks behind the final pipeline and its controlled design variants.</p>
+    </div>
+    <div class="code-grid">
+      <article class="code-card"><h3>Final pipeline</h3><p>Full query-adaptive pipeline with caching, hybrid retrieval, instrumentation, and evaluation.</p><a class="button" href="./notebooks/FINAL_batch_1_with_eval.ipynb" download>Download notebook</a></article>
+      <article class="code-card"><h3>Ablation 1 &mdash; no cache</h3><p>Recomputes the selected branch for every question instead of reusing per-video chunks.</p><a class="button light" href="./notebooks/ablation1_no_cache.ipynb" download>Download notebook</a></article>
+      <article class="code-card"><h3>Ablation 2 &mdash; no reranker</h3><p>Uses dense retrieval order directly and removes the BM25 lexical re-ranking step.</p><a class="button light" href="./notebooks/ablation2_no_reranker.ipynb" download>Download notebook</a></article>
+      <article class="code-card"><h3>Ablation 3 &mdash; unrestricted retrieval</h3><p>Retrieves across all stored branch categories rather than filtering to the routed category.</p><a class="button light" href="./notebooks/ablation3_unrestricted_retrieval.ipynb" download>Download notebook</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="citation" class="section band" aria-labelledby="citation-h">
+  <div class="container citation">
+    <div class="section-heading"><h2 id="citation-h">Citation</h2><p>Reference material for the framework is included with the project source documents.</p></div>
+    <pre><code>@misc{queryadaptivevideoqa,
+  title  = {Query-Adaptive, Branch-Selective VideoQA RAG Pipeline},
+  note   = {Project framework and evaluation notebooks},
+  year   = {2026}
+}</code></pre>
+  </div>
+</section>
 </main>
 
-
+<footer><div class="container">Query-adaptive VideoQA framework &middot; Static research project site</div></footer>
 </body>
 </html>
