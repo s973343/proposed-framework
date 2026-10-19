@@ -88,6 +88,19 @@ h1 { max-width: 900px; margin: 0 auto 1rem; font-size: clamp(2.35rem, 6vw, 4.65r
 .branch.motion { --branch-color: var(--orange); }
 .branch.counting { --branch-color: var(--green); }
 .branch.audio { --branch-color: var(--pink); }
+.examples-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.example-card { padding: 1.35rem; border: 1px solid var(--line); border-top: 3px solid var(--example-color, var(--blue)); border-radius: 14px; background: #fff; box-shadow: 0 4px 15px rgba(30, 42, 56, .035); }
+.example-card.spatial { --example-color: var(--purple); }
+.example-card.spatiotemporal { --example-color: var(--blue); }
+.example-card.counting { --example-color: var(--green); }
+.example-card.audio { --example-color: var(--pink); }
+.example-label { margin: 0 0 .7rem; color: var(--example-color, var(--blue)); font-size: .76rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.example-card h3 { margin: 0 0 1rem; font-size: 1.08rem; }
+.example-card dl { margin: 0; }
+.example-card dt { margin-top: .75rem; color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.example-card dt:first-child { margin-top: 0; }
+.example-card dd { margin: .18rem 0 0; color: var(--ink); font-size: .92rem; line-height: 1.55; }
+.example-card dd.prediction { color: var(--muted); }
 .code-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .code-card { display: flex; flex-direction: column; align-items: flex-start; padding: 1.35rem; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
 .code-card h3 { margin: 0 0 .45rem; font-size: 1.08rem; }
@@ -101,7 +114,7 @@ code { padding: .12em .3em; border-radius: 4px; background: #f0f2f5; color: #4e3
   :root { --paper: #111418; --band: #171b20; --ink: #edf0f3; --muted: #aeb6c0; --line: #2b333c; --shadow: 0 12px 35px rgba(0,0,0,.22); }
   .topbar { background: rgba(17,20,24,.96); }
   .hero { background: radial-gradient(circle at 50% 0%, #1b2940 0, var(--paper) 53%); }
-  .tag, .button.light, .stat, .stage, .branch, .code-card { background: #171b20; }
+   .tag, .button.light, .stat, .stage, .branch, .example-card, .code-card { background: #171b20; }
   .button.light:hover { background: #20262d; }
   pre, code { background: #1d232a; color: #d8c8ff; }
 }
@@ -111,7 +124,7 @@ code { padding: .12em .3em; border-radius: 4px; background: #f0f2f5; color: #4e3
   .nav { gap: .25rem .7rem; }
   .hero { padding: 3.7rem 0 3.3rem; }
   .section { padding: 3.2rem 0; }
-  .stats, .pipeline, .branch-grid, .code-grid { grid-template-columns: 1fr; }
+   .stats, .pipeline, .branch-grid, .examples-grid, .code-grid { grid-template-columns: 1fr; }
   .branch:last-child { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -128,6 +141,7 @@ code { padding: .12em .3em; border-radius: 4px; background: #f0f2f5; color: #4e3
         <li><a href="#overview">Overview</a></li>
         <li><a href="#architecture">Framework</a></li>
         <li><a href="#branches">Branches</a></li>
+        <li><a href="#examples">Examples</a></li>
         <li><a href="#code">Code</a></li>
         <li><a href="#citation">Citation</a></li>
       </ul>
@@ -206,6 +220,65 @@ code { padding: .12em .3em; border-radius: 4px; background: #f0f2f5; color: #4e3
       <article class="branch motion"><h3>Spatio-temporal</h3><p><strong>Trigger:</strong> how something moved or changed position over time.</p><p><strong>Stack:</strong> RT-DETR R50VD and a custom IoU/Hungarian tracker.</p><p><strong>Evidence:</strong> per-track start position, end position, and time span.</p></article>
       <article class="branch counting"><h3>Counting</h3><p><strong>Trigger:</strong> &ldquo;how many&rdquo; questions.</p><p><strong>Stack:</strong> RT-DETR with the same tracker to de-duplicate repeated sightings.</p><p><strong>Evidence:</strong> exact unique-instance counts with supporting frame metadata.</p></article>
       <article class="branch audio"><h3>Audio</h3><p><strong>Trigger:</strong> speech, dialogue, or non-speech sound events.</p><p><strong>Stack:</strong> Whisper large-v3-turbo and AST AudioSet tagging.</p><p><strong>Evidence:</strong> timestamped transcript segments annotated with sound-event tags.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="examples" class="section band" aria-labelledby="examples-h">
+  <div class="container">
+    <div class="section-heading">
+      <h2 id="examples-h">Sample query–answer pairs</h2>
+      <p>Four representative examples show how questions, reference answers, and model predictions align across the evaluation categories.</p>
+    </div>
+    <div class="examples-grid">
+      <article class="example-card spatial">
+        <p class="example-label">Spatial</p>
+        <h3>Preparing a new mower</h3>
+        <dl>
+          <dt>Question</dt>
+          <dd>What do you need to do before you start a new mower?</dd>
+          <dt>Ground-truth answer</dt>
+          <dd>Plug igniter.</dd>
+          <dt>Predicted answer</dt>
+          <dd class="prediction">Before starting a new mower, the plug is needed to be ignited, this reflects operational readiness and safety.</dd>
+        </dl>
+      </article>
+      <article class="example-card spatiotemporal">
+        <p class="example-label">Spatio-temporal</p>
+        <h3>Gathering after the ball</h3>
+        <dl>
+          <dt>Question</dt>
+          <dd>Where does the family gather for their meal the day after the ball?</dd>
+          <dt>Ground-truth answer</dt>
+          <dd>In the dining room.</dd>
+          <dt>Predicted answer</dt>
+          <dd class="prediction">The family gathers for their meal around a dining table in a warmly lit room adorned with portraits.</dd>
+        </dl>
+      </article>
+      <article class="example-card counting">
+        <p class="example-label">Counting</p>
+        <h3>Distinctly colored dresses</h3>
+        <dl>
+          <dt>Question</dt>
+          <dd>How many distinctly colored dresses are mentioned among the women at the estate?</dd>
+          <dt>Ground-truth answer</dt>
+          <dd>Two — a lady in white and a lady in blue.</dd>
+          <dt>Predicted answer</dt>
+          <dd class="prediction">Two distinctly colored dresses are mentioned among the women at the estate.</dd>
+        </dl>
+      </article>
+      <article class="example-card audio">
+        <p class="example-label">Audio</p>
+        <h3>Sounds in a casino card game</h3>
+        <dl>
+          <dt>Question</dt>
+          <dd>Would the casino card-playing scene likely include chatter and shuffling sounds?</dd>
+          <dt>Ground-truth answer</dt>
+          <dd>Yes, likely chatter and card-shuffling sounds.</dd>
+          <dt>Predicted answer</dt>
+          <dd class="prediction">Yes, the casino card-playing scene would likely include chatter and shuffling sounds, as the summary emphasizes a lively atmosphere with social interactions and card games.</dd>
+        </dl>
+      </article>
     </div>
   </div>
 </section>
